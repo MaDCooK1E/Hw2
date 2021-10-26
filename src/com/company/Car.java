@@ -1,9 +1,9 @@
 package com.company;
 
 public class Car {
-    private int maxSpeed;
-    private int engineVolume;
-    private int weight;
+    int maxSpeed;
+    int engineVolume;
+    int weight;
 
 
     public Car(int maxSpeed, int engineVolume, int weight) {
@@ -13,15 +13,23 @@ public class Car {
 
     }
 
-    public int getMaxSpeed() {
-        return maxSpeed;
+    public String winRate(Car car) {
+        if (this.maxSpeed > car.maxSpeed)
+            return "У первой больше шансов";
+        else if (this.maxSpeed < car.maxSpeed)
+            return "У второй больше шансов";
+        else return "Одинаковые  шансы";
+
+
     }
 
-    public int getEngineVolume() {
-        return engineVolume;
+    public String equals(Car car) {
+        if (this.maxSpeed != car.maxSpeed || this.engineVolume != engineVolume || this.weight != weight)
+            return "Машины разные.";
+        else return "Машины одинаковые.";
+
+
     }
 
-    public int getWeight() {
-        return weight;
-    }
+
 }
